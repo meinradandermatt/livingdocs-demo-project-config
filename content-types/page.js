@@ -1,23 +1,17 @@
 module.exports = {
-  handle: 'regular',
-  documentType: 'article',
+  handle: 'page',
+  documentType: 'page',
   info: {
-    label: 'Regular Article'
+    label: 'Page'
   },
   components: [{
     name: 'title'
   }, {
     name: 'p'
   }, {
-    name: 'p2'
-  }, {
     name: 'image'
   }, {
     name: 'article-link'
-  }, {
-    name: 'portfolio-container'
-  }, {
-    name: 'complex-paragraph'
   }],
   editorWrapper: '<section class="container doc-section"></section>',
   defaultContent: [{
@@ -57,6 +51,12 @@ module.exports = {
     type: 'li-datetime',
     ui: {
       component: 'liMetaDatetimeForm'
+    }
+  }, {
+    handle: 'tags',
+    type: 'li-string-list',
+    ui: {
+      component: 'liMetaStringListForm'
     }
   }, {
     handle: 'teaserImage',
@@ -114,18 +114,6 @@ module.exports = {
         placeholder: 'Set a title for the article\'s URL',
         canReset: true
       }
-    }
-  }, {
-    handle: 'references',
-    type: 'li-reference-list',
-    config: {
-      referenceType: 'documents',
-      documentType: 'data-record',
-      contentType: 'tag'
-    },
-    ui: {
-      component: 'liMetaReferenceForm',
-      label: 'tags'
     }
   }],
   editor: {

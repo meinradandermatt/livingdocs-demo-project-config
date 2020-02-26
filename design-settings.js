@@ -6,10 +6,10 @@ module.exports = {
     css: ['https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css']
   },
   componentProperties: [{
-      type: 'style',
-      label: 'Background Color',
-      name: 'css-background-color',
-      cssProperty: 'background-color'
+    type: 'style',
+    label: 'Background Color',
+    name: 'css-background-color',
+    cssProperty: 'background-color'
   }, {
     type: 'option',
     label: 'Thin',
@@ -19,25 +19,34 @@ module.exports = {
     type: 'select',
     label: 'Class selection',
     name: 'css-class-selection',
-    options: [
-      {caption: 'Default'},
-      {caption: 'Red',
-      value: 'materialize-red-text'}
-    ]
+    options: [{
+      caption: 'Default'
+    }, {
+      caption: 'Red',
+      value: 'materialize-red-text'
+    }]
   }],
   componentGroups: [{
     name: 'content',
     label: 'Components',
     components: ['title', 'p', 'p2', 'image']
+  }, {
+    name: 'link',
+    label: 'Links',
+    components: ['article-link']
   }],
   defaultComponents: {
-    paragraph: 'p2',
+    paragraph: 'p',
     image: 'image'
   },
   fieldExtractor: [{
     identifier: 'title',
     type: 'text',
-    matches: ['p2.text']
+    matches: ['title.title']
+  }, {
+    identifier: 'description',
+    type: 'text',
+    matches: ['p.text']
   }, {
     identifier: 'teaserImage',
     type: 'image',
