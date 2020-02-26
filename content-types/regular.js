@@ -54,9 +54,12 @@ module.exports = {
     }
   }, {
     handle: 'publishDate',
-    type: 'li-datetime',
+    type: 'li-publish-date',
     ui: {
-      component: 'liMetaDatetimeForm'
+      component: 'liMetaDatetimeForm',
+      config: {
+        label: 'Schedule publish date'
+      }
     }
   }, {
     handle: 'teaserImage',
@@ -143,6 +146,12 @@ module.exports = {
       type: 'article',
       current: '/:category-:id.html',
       legacy: []
+    }
+  },
+  publicationIndex: {
+    sortDate: {
+      fieldName: 'publishDate',
+      type: 'li-publish-date'
     }
   }
 }

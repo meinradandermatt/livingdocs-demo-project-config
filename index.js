@@ -1,6 +1,6 @@
 module.exports = {
   v: 2,
-  $baseRevision: 32,
+  $baseRevision: 37,
 
   settings: require('./settings'),
   contentTypes: [
